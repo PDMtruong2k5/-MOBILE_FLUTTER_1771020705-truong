@@ -104476,7 +104476,7 @@ n.fZ(A.v5(null,null,null,B.ah,null,B.B,null,A.ab(o==null?"C\xf3 l\u1ed7i x\u1ea3
 return A.z($async$$0,r)},
 $S:11}
 A.a9R.prototype={
-abM(){var s,r="application/json",q=A.b1O("http://localhost:5000/api",B.qW,A.aH(["Content-Type",r,"Accept",r],t.N,t.z),B.qW),p=new A.SU(A.b([B.II],t.i6))
+abM(){var s,r="application/json",q=A.b1O("https://pcm-truong.onrender.com/api",B.qW,A.aH(["Content-Type",r,"Accept",r],t.N,t.z),B.qW),p=new A.SU(A.b([B.II],t.i6))
 p.P(p,B.Rl)
 s=new A.ad7($,p,$,new A.agr(51200),!1)
 s.bZ$=q
@@ -104843,7 +104843,7 @@ A.Wu.prototype={
 tn(a){return this.avQ(a)},
 avQ(a){var s=0,r=A.A(t.H),q=1,p=[],o=this,n,m,l,k,j,i,h
 var $async$tn=A.B(function(b,c){if(b===1){p.push(c)
-s=q}for(;;)switch(s){case 0:k="http://localhost:5000/hubs/pcm?access_token="+a
+s=q}for(;;)switch(s){case 0:k="https://pcm-truong.onrender.com/hubs/pcm?access_token="+a
 j=A.b4L(null)
 i=A.b34(null)
 if(k.length===0)A.Y(A.h4("The 'HubConnectionBuilder.withUrl' method must be called before building the connection."))

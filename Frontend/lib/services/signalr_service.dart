@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:signalr_netcore/signalr_client.dart';
 
 class SignalRService {
-  static const String hubUrl = 'http://localhost:5000/hubs/pcm';
+  static const String hubUrl = 'https://pcm-truong.onrender.com/hubs/pcm';
 
   HubConnection? _hubConnection;
   String? _token;
