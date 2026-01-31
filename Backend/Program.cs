@@ -10,8 +10,9 @@ using PcmBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Force backend to listen on HTTP port 5000
-builder.WebHost.UseUrls("http://localhost:5000", "http://0.0.0.0:5000");
+// Configure port binding - support both local dev and Render deployment
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 // ==================== Database Configuration ====================
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

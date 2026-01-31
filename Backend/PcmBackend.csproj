@@ -22,4 +22,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <!-- Exclude tools and other nested projects from being compiled into the main Web project -->
+  <ItemGroup>
+    <Compile Remove="Tools\**\*.cs" />
+    <None Remove="Tools\**\*" />
+  </ItemGroup>
+
 </Project>

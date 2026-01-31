@@ -1,0 +1,39 @@
+services:
+  # Web Service - Backend API
+  - type: web
+    name: pcm-backend
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    dockerfilePath: ./Backend/Dockerfile
+    dockerContext: ./Backend
+    
+    # Environment variables
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://+:8080
+      - key: Jwt__Key
+        generateValue: true
+        # Hoặc set giá trị cố định:
+        # value: YourSuperSecretKeyThatIsAtLeast32CharactersLong!@#$%
+      - key: Jwt__Issuer
+        value: PcmBackend
+      - key: Jwt__Audience
+        value: PcmMobileApp
+      - key: Jwt__ExpireMinutes
+        value: 1440
+      - key: ConnectionStrings__DefaultConnection
+        value: Data Source=/data/Pcm734Database.db
+    
+    # Health check endpoint
+    healthCheckPath: /swagger/index.html
+    
+    # Disk for SQLite database persistence (chỉ có trên paid plan)
+    # Uncomment nếu nâng cấp lên paid plan:
+    # disk:
+    #   name: sqlite-data
+    #   mountPath: /data
+    #   sizeGB: 1
