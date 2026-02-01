@@ -1,7 +1,7 @@
 # 🎾 Pickleball Club Management - Vợt Thủ Phố Núi
 
 **Sinh viên**: Phạm Đình Minh Trưởng  
-**MSSV**: 2121050705  
+**MSSV**: xxxxx0705  
 **Lớp**: CNTT 17-08
 
 Hệ thống quản lý CLB Pickleball hoàn chỉnh với Backend (ASP.NET Core 8 Web API), Frontend (Flutter Mobile/Web), đã được deploy lên Production.
